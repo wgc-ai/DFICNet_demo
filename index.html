@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="Home page of the DFICNet and the object detection result visualization video."
+          name="description">
+    <meta content="DFICNet, object detection, TBD" name="keywords">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <title>DFICNet: Dynamic Multilayer Feature Imitation and IoU-Weighted Contrastive Learning for Small Object Detection</title>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <!--    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>-->
+    <!--    <script>-->
+    <!--    window.dataLayer = window.dataLayer || [];-->
+    <!--    -->
+    <!--    function gtag() {-->
+    <!--      dataLayer.push(arguments);-->
+    <!--    }-->
+    <!--    -->
+    <!--    gtag('js', new Date());-->
+    <!--    -->
+    <!--    gtag('config', 'G-PYVRSFMDRL');-->
+    <!--    </script>-->
+
+    <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+          rel="stylesheet">
+
+    <link href="./static/css/bulma.min.css" rel="stylesheet">
+    <link href="./static/css/bulma-carousel.min.css" rel="stylesheet">
+    <link href="./static/css/bulma-slider.min.css" rel="stylesheet">
+    <link href="./static/css/fontawesome.all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css"
+          rel="stylesheet">
+    <link href="./static/css/index.css" rel="stylesheet">
+    <link href="./static/images/icon.svg" rel="icon">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script defer src="./static/js/fontawesome.all.min.js"></script>
+    <script src="./static/js/bulma-carousel.min.js"></script>
+    <script src="./static/js/bulma-slider.min.js"></script>
+    <script src="./static/js/index.js"></script>
+</head>
+
+<body>
+
+<section class="hero">
+    <div class="hero-body">
+        <div class="container is-max-desktop">
+            <div class="columns is-centered">
+                <div class="column has-text-centered">
+                    <!--title-->
+                    <h1 class="title is-1 publication-title">DFICNet: Dynamic Multilayer Feature Imitation and IoU-Weighted Contrastive Learning for Small Object Detection</h1>
+                    <!--author-->
+                    <div class="is-size-5 publication-authors">
+                        <span class="author-block">
+                            <a>ANONYMOUS AUTHOR(S)</a>
+                        </span>
+                    </div>
+                    <!--link-->
+                    <div class="column has-text-centered">
+                        <div class="publication-links">
+<!--                            &lt;!&ndash; PDF Link. &ndash;&gt;-->
+<!--                            <span class="link-block">-->
+<!--                                <a class="external-link button is-normal is-rounded is-dark">-->
+<!--                                    <span class="icon">-->
+<!--                                        <i class="fas fa-file-pdf"></i>-->
+<!--                                    </span>-->
+<!--                                    <span>Paper</span>-->
+<!--                                </a>-->
+<!--                            </span>-->
+<!--                            &lt;!&ndash; Video Link. &ndash;&gt;-->
+<!--                            <span class="link-block">-->
+<!--                                <a class="external-link button is-normal is-rounded is-dark">-->
+<!--                                    <span class="icon">-->
+<!--                                        <i class="fab fa-youtube"></i>-->
+<!--                                    </span>-->
+<!--                                    <span>Video</span>-->
+<!--                                </a>-->
+<!--                            </span>-->
+                            <!-- Code Link. -->
+                            <span class="link-block">
+                                <a href="https://anonymous.4open.science/r/dfic-57D1"
+                                   class="external-link button is-normal is-rounded is-dark">
+                                    <span class="icon">
+                                        <i class="fab fa-github"></i>
+                                    </span>
+                                    <span>Code</span>
+                                </a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Framework -->
+<section class="hero teaser">
+    <div class="hero-body">
+        <div class="container is-max-desktop">
+            <div class="columns is-centered">
+                <div class="column has-text-centered">
+                    <h2 class="title is-3">Framework</h2>
+                    <p align="center">
+                        <img width="100%" src="static/images/framework.png" class="img-responsive" alt="overview">
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Demo -->
+<section class="hero teaser">
+    <div class="hero-body">
+        <div class="container is-max-desktop">
+            <div class="columns is-centered">
+                <div class="column has-text-centered">
+                    <h2 class="title is-3">Demo</h2>
+                    <p style="text-align:justify;">
+                        The following demo showcases a side-by-side comparison between our proposed object detection method and YOLOv8 on VisDrone2019-VID-val data. The left side shows the detection results of our method, while the right side presents the results from YOLOv8. As demonstrated, our approach achieves more accurate and stable detections, particularly on small objects.
+                    </p>
+                    <br>
+                    <video poster="" id="compare_demo" autoplay controls muted loop playsinline height="100%">
+                        <source src="static/videos/comparison_output_cv2_182_compress.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="columns is-centered has-text-centered">
+        <h2 class="title is-3"> Other Results</h2>
+    </div>
+</section>
+
+<br>
+
+<section class="hero is-light is-small">
+    <div class="hero-body">
+        <div class="container">
+            <div id="results-dance" class="carousel results-carousel">
+                <div class="item item-steve">
+                    <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
+                        <source src="static/videos/comparison_output_cv2_086_compress.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="item item item-shiba">
+                    <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
+                        <source src="static/videos/comparison_output_cv2_117_compress.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="item item-fullbody">
+                    <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
+                        <source src="static/videos/comparison_output_cv2_137_compress.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="item item-blueshirt">
+                    <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
+                        <source src="static/videos/comparison_output_cv2_305_compress.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="item item-mask">
+                    <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
+                        <source src="static/videos/comparison_output_cv2_339_compress.mp4" type="video/mp4">
+                    </video>
+                </div>
+<!--                <div class="item item-coffee">-->
+<!--                    <video poster="" id="coffee" autoplay controls muted loop playsinline height="100%">-->
+<!--                        <source src="static/videos/dancetrack0064.mp4" type="video/mp4">-->
+<!--                    </video>-->
+<!--                </div>-->
+<!--                <div class="item item-toby">-->
+<!--                    <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">-->
+<!--                        <source src="static/videos/dancetrack0065.mp4" type="video/mp4">-->
+<!--                    </video>-->
+<!--                </div>-->
+<!--                <div class="item item-car">-->
+<!--                    <video poster="" id="car" autoplay controls muted loop playsinline height="100%">-->
+<!--                        <source src="static/videos/dancetrack0094.mp4" type="video/mp4">-->
+<!--                    </video>-->
+<!--                </div>-->
+<!--                <div class="item item-bus">-->
+<!--                    <video poster="" id="bus" autoplay controls muted loop playsinline height="100%">-->
+<!--                        <source src="static/videos/dancetrack0077.mp4" type="video/mp4">-->
+<!--                    </video>-->
+<!--                </div>-->
+            </div>
+        </div>
+    </div>
+</section>
+
+<br>
+<br>
+
+<!--<section>-->
+<!--    <div class="columns is-centered has-text-centered">-->
+<!--        <h2 class="title is-3"> SportsMOT Results</h2>-->
+<!--    </div>-->
+<!--</section>-->
+
+<br>
+
+<!--<section class="hero is-light is-small">-->
+<!--    <div class="hero-body">-->
+<!--        <div class="container">-->
+<!--            <div id="results-sports" class="carousel results-carousel">-->
+<!--                <div class="item item-sports0001">-->
+<!--                    <video poster="" id="sports0001" autoplay controls muted loop playsinline height="100%">-->
+<!--                        <source src="static/videos/sports0001.mp4" type="video/mp4">-->
+<!--                    </video>-->
+<!--                </div>-->
+<!--                <div class="item item-sports0001">-->
+<!--                    <video poster="" id="sports0005" autoplay controls muted loop playsinline height="100%">-->
+<!--                        <source src="static/videos/sports0005.mp4" type="video/mp4">-->
+<!--                    </video>-->
+<!--                </div>-->
+<!--                <div class="item item item-sports0008">-->
+<!--                    <video poster="" id="sports0008" autoplay controls muted loop playsinline height="100%">-->
+<!--                        <source src="static/videos/sports0008.mp4" type="video/mp4">-->
+<!--                    </video>-->
+<!--                </div>-->
+<!--                <div class="item item-sports0002">-->
+<!--                    <video poster="" id="sports0002" autoplay controls muted loop playsinline height="100%">-->
+<!--                        <source src="static/videos/sports0002.mp4" type="video/mp4">-->
+<!--                    </video>-->
+<!--                </div>-->
+<!--                <div class="item item-sports0006">-->
+<!--                    <video poster="" id="sports0006" autoplay controls muted loop playsinline height="100%">-->
+<!--                        <source src="static/videos/sports0006.mp4" type="video/mp4">-->
+<!--                    </video>-->
+<!--                </div>-->
+<!--                <div class="item item-sports0009">-->
+<!--                    <video poster="" id="sports0009" autoplay controls muted loop playsinline height="100%">-->
+<!--                        <source src="static/videos/sports0009.mp4" type="video/mp4">-->
+<!--                    </video>-->
+<!--                </div>-->
+<!--                <div class="item item-sports0003">-->
+<!--                    <video poster="" id="sports0003" autoplay controls muted loop playsinline height="100%">-->
+<!--                        <source src="static/videos/sports0003.mp4" type="video/mp4">-->
+<!--                    </video>-->
+<!--                </div>-->
+<!--                <div class="item item-sports0007">-->
+<!--                    <video poster="" id="sports0007" autoplay controls muted loop playsinline height="100%">-->
+<!--                        <source src="static/videos/sports0007.mp4" type="video/mp4">-->
+<!--                    </video>-->
+<!--                </div>-->
+<!--                <div class="item item-sports0010">-->
+<!--                    <video poster="" id="sports0010" autoplay controls muted loop playsinline height="100%">-->
+<!--                        <source src="static/videos/sports0010.mp4" type="video/mp4">-->
+<!--                    </video>-->
+<!--                </div>-->
+<!--                <div class="item item-sports0004">-->
+<!--                    <video poster="" id="sports0004" autoplay controls muted loop playsinline height="100%">-->
+<!--                        <source src="static/videos/sports0004.mp4" type="video/mp4">-->
+<!--                    </video>-->
+<!--                </div>-->
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+        <h2 class="title">BibTeX</h2>
+        <pre><code>
+            Citation information will be updated later
+        </code></pre>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="container">
+        <div class="content has-text-centered">
+            <a class="icon-link">
+                <i class="fas fa-file-pdf"></i>
+            </a>
+            <a class="icon-link">
+                <i class="fab fa-github"></i>
+            </a>
+        </div>
+        <div class="columns is-centered has-text-centered">
+            <div class="column is-8">
+                <div class="content">
+                    <p>
+                        The website template was borrowed from <a href="https://nerfies.github.io/">Nerfies</a>.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
+
+
+
